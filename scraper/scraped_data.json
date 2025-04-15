@@ -1,0 +1,49 @@
+{
+  "title": "Puppeteer | Puppeteer",
+  "heading": "Puppeteer",
+  "metaDescription": "build",
+  "firstParagraph": " ",
+  "totalLinks": 204,
+  "links": [
+    {
+      "text": "Skip to main content",
+      "href": "https://pptr.dev/#__docusaurus_skipToContent_fallback"
+    },
+    {
+      "text": "Puppeteer",
+      "href": "https://pptr.dev/"
+    },
+    {
+      "text": "Docs",
+      "href": "https://pptr.dev/category/introduction"
+    },
+    {
+      "text": "Puppeteer API",
+      "href": "https://pptr.dev/api/puppeteer.puppeteernode"
+    },
+    {
+      "text": "@puppeteer/browsers API",
+      "href": "https://pptr.dev/browsers-api/"
+    },
+    {
+      "text": "24.6.1",
+      "href": "https://pptr.dev/"
+    },
+    {
+      "text": "Next",
+      "href": "https://pptr.dev/next/"
+    },
+    {
+      "text": "24.6.1",
+      "href": "https://pptr.dev/"
+    },
+    {
+      "text": "24.6.0",
+      "href": "https://github.com/puppeteer/puppeteer/blob/puppeteer-v24.6.0/docs/api/index.md"
+    },
+    {
+      "text": "24.5.0",
+      "href": "https://github.com/puppeteer/puppeteer/blob/puppeteer-v24.5.0/docs/api/index.md"
+    }
+  ]
+}
