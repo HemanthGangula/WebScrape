@@ -66,11 +66,9 @@ if (!url) {
 
     await browser.close();
     
-    // Save the complete data to the JSON file
     const outputPath = path.resolve(process.cwd(), 'scraped_data.json');
     fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
     
-    // Also save the data with markers for the Python app to a separate file
     const parsedOutputPath = path.resolve(process.cwd(), 'parsed_data.txt');
     fs.writeFileSync(parsedOutputPath, `JSON_START\n${JSON.stringify(data)}\nJSON_END`);
     

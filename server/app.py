@@ -16,7 +16,6 @@ def get_scraped_data():
     
     if cached_data is None or current_time - last_scrape_time > CACHE_LIFETIME:
         try:
-            # First try to read from the standard JSON file
             json_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'scraped_data.json')
             
             if os.path.exists(json_path):
@@ -53,7 +52,6 @@ def run_scraper():
         if process.returncode != 0:
             return {"error": "Scraper failed", "message": process.stderr}
             
-        # First try to read the normal JSON file
         json_path = os.path.join(working_dir, 'scraped_data.json')
         
         if os.path.exists(json_path):
@@ -62,7 +60,6 @@ def run_scraper():
                 last_scrape_time = time.time()
                 return cached_data
         
-        # If that fails, try to read from the parsed_data.txt file
         parsed_path = os.path.join(working_dir, 'parsed_data.txt')
         if os.path.exists(parsed_path):
             with open(parsed_path, 'r') as f:
@@ -84,7 +81,6 @@ def run_scraper():
 @app.route('/')
 def index():
     data = get_scraped_data()
-    # Use Response instead of jsonify to maintain key order
     return Response(
         json.dumps(data, indent=2),
         mimetype='application/json'
@@ -93,7 +89,6 @@ def index():
 @app.route('/api/data')
 def get_data():
     data = get_scraped_data()
-    # Use Response instead of jsonify to maintain key order
     return Response(
         json.dumps(data, indent=2),
         mimetype='application/json'
@@ -102,7 +97,6 @@ def get_data():
 @app.route('/refresh')
 def refresh_data():
     data = run_scraper()
-    # Use Response instead of jsonify to maintain key order
     return Response(
         json.dumps(data, indent=2),
         mimetype='application/json'
